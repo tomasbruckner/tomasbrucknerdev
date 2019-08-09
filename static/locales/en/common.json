@@ -1,0 +1,24 @@
+{
+  "footer": {
+    "copyright": "Tomáš Bruckner © 2018 - 2019"
+  },
+  "pageTitle": " Tomáš Bruckner",
+  "navigation": {
+    "about": "About me",
+    "contact": "Contact",
+    "lectures": "Lectures"
+  },
+  "about": {
+    "text": "Software engineer, web developer and consultant. I specialize in React, Node.js, MongoDB and AWS. I offer programming work, analyzing new and existing projects, implementing and optimizing development processes, and tailor-made trainings."
+  },
+  "videos": {
+    "unfurling": "Unfurling - How to improve your website preview (czech audio)",
+    "babel": "Babel - Writing our first plugin (czech audio)",
+    "aws": "AWS - The most interesting parts (czech audio)",
+    "alexa": "Alexa - First application (czech audio)",
+    "mongo1": "MongoDB - Part 1 (czech audio)",
+    "mongo2": "MongoDB - Part 2 (czech audio)",
+    "docker": "Docker - Performance problems on Windows and OSX (czech audio)",
+    "adonis": "Adonis - Case study (czech audio)"
+  }
+}
