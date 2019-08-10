@@ -1,20 +1,20 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import Navigation from './components/Navigation';
 import Container from '@material-ui/core/Container';
+import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
+import Lectures from './components/Lectures';
+import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
-import AboutMe from '../components/AboutMe';
-import Contact from '../components/Contact';
-import Navigation from '../components/Navigation';
-import Lectures from '../components/Lectures';
-import Footer from '../components/Footer';
 
-const IndexPage = () => {
+const App = () => {
   const theme = useTheme();
   const isLg = useMediaQuery(theme.breakpoints.up('lg'));
   const { t } = useTranslation();
 
   return (
-    <>
+    <div>
       <div
         style={{
           flexGrow: 1,
@@ -42,12 +42,8 @@ const IndexPage = () => {
         </Container>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
-IndexPage.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-});
-
-export default IndexPage;
+export default App;

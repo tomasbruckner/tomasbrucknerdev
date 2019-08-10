@@ -1,54 +1,55 @@
 {
-  "name": "tomasbrucknerdev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "node server.js",
-    "build": "next build",
-    "export": "npm run build && next export",
-    "start": "NODE_ENV=production node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "cratomasbrucknerdev",
+  "version": "1.1.0",
+  "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.1",
-    "@material-ui/icons": "^4.2.1",
-    "next": "^9.0.3",
-    "next-i18next": "^0.53.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-i18next": "^10.11.5"
-  },
-  "devDependencies": {
-    "@types/node": "^12.7.0",
-    "@types/react": "^16.8.25",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.1",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.2",
-    "express": "^4.17.1",
-    "husky": "^3.0.2",
-    "lint-staged": "^9.2.1",
+    "i18next": "^17.0.10",
+    "i18next-browser-languagedetector": "^3.0.3",
+    "i18next-xhr-backend": "^3.1.1",
     "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-i18next": "^10.11.5",
+    "react-scripts": "3.1.0",
     "typescript": "^3.5.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "firebase:serve": "firebase serve",
+    "firebase:deploy": "firebase deploy"
   },
-  "lint-staged": {
-    "*.{tsx}": [
-      "prettier --write",
-      "git add"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2"
   },
   "prettier": {
     "endOfLine": "lf",
