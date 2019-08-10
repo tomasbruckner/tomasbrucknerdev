@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+Array [
+  <a
+    href="#about"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": 500,
+        "padding": 16,
+        "textDecoration": "none",
+      }
+    }
+  >
+    navigation.about
+  </a>,
+  <a
+    href="#contact"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": 500,
+        "padding": 16,
+        "textDecoration": "none",
+      }
+    }
+  >
+    navigation.contact
+  </a>,
+  <a
+    href="#lectures"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": 500,
+        "padding": 16,
+        "textDecoration": "none",
+      }
+    }
+  >
+    navigation.lectures
+  </a>,
+]
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoCard renders correctly 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  style={
+    Object {
+      "margin": "48px",
+      "minWidth": 275,
+    }
+  }
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+      style={
+        Object {
+          "marginBottom": "16px",
+        }
+      }
+    >
+      testVideoHeadline
+    </h2>
+    <iframe
+      height="440"
+      src="testVideoUrl"
+      style={
+        Object {
+          "borderWidth": 0,
+        }
+      }
+      title="testVideoHeadline"
+      width="100%"
+    />
+  </div>
+</div>
+`;

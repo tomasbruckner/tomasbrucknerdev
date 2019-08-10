@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#3f51b5",
+        "color": "white",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "64px",
+        "width": "100%",
+      }
+    }
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      footer.copyright
+    </p>
+  </div>
+</footer>
+`;
