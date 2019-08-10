@@ -14,7 +14,7 @@ i18n
   .init({
     fallbackLng: 'cs',
     lng: 'cs',
-    debug: true,
+    debug: false,
     load: 'languageOnly',
     ns: ['translation'],
     interpolation: {
