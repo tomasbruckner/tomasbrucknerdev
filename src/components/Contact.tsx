@@ -3,6 +3,7 @@ import { Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import MediumIcon from './icons/MediumIcon';
 import GithubIcon from './icons/GithubIcon';
+import StackOverflowIcon from './icons/StackOverflowIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import ContactEmailIcon from './icons/ContactEmailIcon';
 
@@ -24,6 +25,12 @@ const Contact = () => {
         <GithubIcon />
         <a style={linkStyle} href="https://github.com/tomasbruckner">
           github.com/tomasbruckner
+        </a>
+      </Typography>
+      <Typography gutterBottom>
+        <StackOverflowIcon />
+        <a style={linkStyle} href="https://stackoverflow.com/users/3323141/tomas-bruckner">
+          stackoverflow.com/users/3323141/tomas-bruckner
         </a>
       </Typography>
       <Typography gutterBottom>

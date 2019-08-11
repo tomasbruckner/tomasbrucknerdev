@@ -46,6 +46,46 @@ Array [
     <svg
       aria-hidden="true"
       className="MuiSvgIcon-root"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 120 120"
+    >
+      <path
+        d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"
+        style={
+          Object {
+            "fill": "#bcbbbb",
+          }
+        }
+      />
+      <path
+        d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"
+        style={
+          Object {
+            "fill": "#f48023",
+          }
+        }
+      />
+    </svg>
+    <a
+      href="https://stackoverflow.com/users/3323141/tomas-bruckner"
+      style={
+        Object {
+          "color": "#0089eb",
+          "marginLeft": "1em",
+          "textDecoration": "none",
+        }
+      }
+    >
+      stackoverflow.com/users/3323141/tomas-bruckner
+    </a>
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root"
       clipRule="evenodd"
       fillRule="evenodd"
       focusable="false"
