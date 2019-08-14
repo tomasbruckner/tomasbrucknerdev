@@ -11,7 +11,8 @@ const VideoCard = ({ videoUrl, videoHeadline }: Props) => {
     <Card
       style={{
         minWidth: 275,
-        margin: '48px',
+        marginTop: '48px',
+        marginBottom: '48px',
       }}
     >
       <CardContent>

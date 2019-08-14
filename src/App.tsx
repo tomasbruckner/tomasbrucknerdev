@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Lectures from './components/Lectures';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
+import { menuLinkStyle } from './styles/commonStyles';
 
 const App = () => {
   const theme = useTheme();
@@ -30,12 +31,14 @@ const App = () => {
                 flexGrow: isLg ? 0 : 1,
               }}
             >
-              {t('pageTitle')}
+              <a href="#home" style={menuLinkStyle}>
+                {t('pageTitle')}
+              </a>
             </Typography>
             <Navigation />
           </Toolbar>
         </AppBar>
-        <Container maxWidth="md" style={{ marginTop: '5em' }}>
+        <Container id="home" maxWidth="md" style={{ marginTop: '5em' }}>
           <AboutMe />
           <Contact />
           <Lectures />

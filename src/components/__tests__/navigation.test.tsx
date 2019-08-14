@@ -9,6 +9,12 @@ import Navigation from 'components/Navigation';
 import renderer from 'react-test-renderer';
 
 it('Navigation renders correctly', () => {
-  const tree = renderer.create(<Navigation />).toJSON();
+  const tree = renderer
+    .create(
+      <div>
+        <Navigation />
+      </div>,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

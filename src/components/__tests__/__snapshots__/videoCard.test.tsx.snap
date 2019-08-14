@@ -5,7 +5,8 @@ exports[`VideoCard renders correctly 1`] = `
   className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
   style={
     Object {
-      "margin": "48px",
+      "marginBottom": "48px",
+      "marginTop": "48px",
       "minWidth": 275,
     }
   }

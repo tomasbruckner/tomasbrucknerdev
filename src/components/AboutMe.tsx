@@ -7,7 +7,7 @@ const AboutMe = () => {
 
   return (
     <div>
-      <Typography id="about" variant="h4" gutterBottom style={{ marginTop: '1em' }}>
+      <Typography id="about" variant="h4" gutterBottom>
         {t('navigation.about')}
       </Typography>
       <Typography>{t('about.text')}</Typography>

@@ -5,11 +5,6 @@ exports[`AboutMe renders correctly 1`] = `
   <h4
     className="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
     id="about"
-    style={
-      Object {
-        "marginTop": "1em",
-      }
-    }
   >
     navigation.about
   </h4>

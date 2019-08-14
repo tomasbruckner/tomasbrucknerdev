@@ -15,6 +15,13 @@ Array [
   </h4>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "marginTop": "1em",
+      }
+    }
   >
     <svg
       aria-hidden="true"
@@ -42,6 +49,13 @@ Array [
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "marginTop": "1em",
+      }
+    }
   >
     <svg
       aria-hidden="true"
@@ -77,11 +91,18 @@ Array [
         }
       }
     >
-      stackoverflow.com/users/3323141/tomas-bruckner
+      stackoverflow.com/users/3323141
     </a>
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "marginTop": "1em",
+      }
+    }
   >
     <svg
       aria-hidden="true"
@@ -111,6 +132,13 @@ Array [
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "marginTop": "1em",
+      }
+    }
   >
     <svg
       aria-hidden="true"
@@ -138,6 +166,13 @@ Array [
   </p>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "marginTop": "1em",
+      }
+    }
   >
     <svg
       aria-hidden="true"
