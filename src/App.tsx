@@ -26,8 +26,8 @@ const App = () => {
             <Typography
               variant="h6"
               style={{
-                marginLeft: isLg ? '15em' : '',
-                width: isLg ? '45em' : '',
+                marginLeft: isLg ? '15%' : '',
+                width: isLg ? '60%' : '',
                 flexGrow: isLg ? 0 : 1,
               }}
             >
