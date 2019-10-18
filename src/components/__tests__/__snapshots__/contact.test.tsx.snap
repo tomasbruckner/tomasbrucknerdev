@@ -11,7 +11,7 @@ Array [
       }
     }
   >
-    navigation.contact
+    Kontakt
   </h4>,
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"

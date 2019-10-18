@@ -1,11 +1,5 @@
-jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (text: string) => text,
-  }),
-}));
-
 import React from 'react';
-import Footer from 'components/Footer';
+import Footer from '../Footer';
 import renderer from 'react-test-renderer';
 
 it('Footer renders correctly', () => {

@@ -1,11 +1,5 @@
-jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (text: string) => text,
-  }),
-}));
-
 import React from 'react';
-import VideoCard from 'components/VideoCard';
+import VideoCard from '../VideoCard';
 import renderer from 'react-test-renderer';
 
 it('VideoCard renders correctly', () => {

@@ -1,18 +1,16 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
 import MediumIcon from './icons/MediumIcon';
 import GithubIcon from './icons/GithubIcon';
 import StackOverflowIcon from './icons/StackOverflowIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import ContactEmailIcon from './icons/ContactEmailIcon';
 import { linkStyle } from '../styles/commonStyles';
+import { t } from '../utils/i18n';
 
 const contactStyle = { marginTop: '1em', display: 'flex', alignItems: 'center' };
 
 const Contact = () => {
-  const { t } = useTranslation();
-
   return (
     <>
       <Typography variant="h4" id="contact" gutterBottom style={{ marginTop: '1em' }}>

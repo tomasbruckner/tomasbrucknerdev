@@ -1,9 +1,8 @@
 import React from 'react';
 import { Typography, useTheme } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
+import { t } from '../utils/i18n';
 
 const Footer = () => {
-  const { t } = useTranslation();
   const theme = useTheme();
 
   return (

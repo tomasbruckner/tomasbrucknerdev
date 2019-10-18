@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/ViewHeadline';
 import IconButton from '@material-ui/core/IconButton';
 import { useMediaQuery, useTheme } from '@material-ui/core';
 import { menuLinkStyle } from '../styles/commonStyles';
+import { t } from '../utils/i18n';
 
 const Navigation = () => {
-  const { t } = useTranslation();
   const [anchor, setAnchor] = useState<HTMLElement | null>(null);
   const theme = useTheme();
   const isLg = useMediaQuery(theme.breakpoints.up('lg'));
