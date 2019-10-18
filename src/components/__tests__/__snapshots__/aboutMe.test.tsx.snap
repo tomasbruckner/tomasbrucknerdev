@@ -6,12 +6,12 @@ exports[`AboutMe renders correctly 1`] = `
     className="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
     id="about"
   >
-    navigation.about
+    O mně
   </h4>
   <p
     className="MuiTypography-root MuiTypography-body1"
   >
-    about.text
+    Softwarový inženýr, webový vývojář a konzultant. Specializuji se na React, Node.js, MongoDB a AWS. Nabízím programátorské práce, analyzování nových i existujících projektů, zavádění a optimalizace vývojových procesů i školení na míru.
   </p>
 </div>
 `;

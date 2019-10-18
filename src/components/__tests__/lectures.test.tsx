@@ -1,11 +1,5 @@
-jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (text: string) => text,
-  }),
-}));
-
 import React from 'react';
-import Lectures from 'components/Lectures';
+import Lectures from '../Lectures';
 import renderer from 'react-test-renderer';
 
 it('Lectures renders correctly', () => {

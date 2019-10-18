@@ -11,7 +11,7 @@ Array [
       }
     }
   >
-    navigation.lectures
+    Lekce
   </h4>,
   <div
     className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
@@ -34,7 +34,7 @@ Array [
           }
         }
       >
-        videos.babel
+        Babel - Jak si udělat vlastní plugin
       </h2>
       <iframe
         height="440"
@@ -44,7 +44,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.babel"
+        title="Babel - Jak si udělat vlastní plugin"
         width="100%"
       />
     </div>
@@ -70,7 +70,7 @@ Array [
           }
         }
       >
-        videos.aws
+        AWS - To nejzajímavější
       </h2>
       <iframe
         height="440"
@@ -80,7 +80,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.aws"
+        title="AWS - To nejzajímavější"
         width="100%"
       />
     </div>
@@ -106,7 +106,7 @@ Array [
           }
         }
       >
-        videos.alexa
+        Alexa - Jak si udělat vlastní aplikaci
       </h2>
       <iframe
         height="440"
@@ -116,7 +116,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.alexa"
+        title="Alexa - Jak si udělat vlastní aplikaci"
         width="100%"
       />
     </div>
@@ -142,7 +142,7 @@ Array [
           }
         }
       >
-        videos.mongo2
+        MongoDB - Část 2
       </h2>
       <iframe
         height="440"
@@ -152,7 +152,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.mongo2"
+        title="MongoDB - Část 2"
         width="100%"
       />
     </div>
@@ -178,7 +178,7 @@ Array [
           }
         }
       >
-        videos.mongo1
+        MongoDB - Část 1
       </h2>
       <iframe
         height="440"
@@ -188,7 +188,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.mongo1"
+        title="MongoDB - Část 1"
         width="100%"
       />
     </div>
@@ -214,7 +214,7 @@ Array [
           }
         }
       >
-        videos.docker
+        Docker - Performance problém na Windows a OSX a jak ho řešit
       </h2>
       <iframe
         height="440"
@@ -224,7 +224,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.docker"
+        title="Docker - Performance problém na Windows a OSX a jak ho řešit"
         width="100%"
       />
     </div>
@@ -250,7 +250,7 @@ Array [
           }
         }
       >
-        videos.adonis
+        AdonisJS - Případová studie
       </h2>
       <iframe
         height="440"
@@ -260,7 +260,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.adonis"
+        title="AdonisJS - Případová studie"
         width="100%"
       />
     </div>
@@ -286,7 +286,7 @@ Array [
           }
         }
       >
-        videos.unfurling
+        Unfurling - Jak definovat preview webové stránky
       </h2>
       <iframe
         height="440"
@@ -296,7 +296,7 @@ Array [
             "borderWidth": 0,
           }
         }
-        title="videos.unfurling"
+        title="Unfurling - Jak definovat preview webové stránky"
         width="100%"
       />
     </div>

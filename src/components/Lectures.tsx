@@ -1,15 +1,9 @@
 import React, { ReactElement } from 'react';
-import { useTranslation } from 'react-i18next';
+import { t } from '../utils/i18n';
 import VideoCard from './VideoCard';
 import { Typography } from '@material-ui/core';
-import * as i18next from 'i18next';
 
-interface Video {
-  title: string;
-  href: string;
-}
-
-const Videos: { [s: string]: Video } = Object.freeze({
+const Videos = Object.freeze({
   Babel: { title: 'videos.babel', href: 'https://www.youtube.com/embed/Me82U4c6K3s' },
   Aws: { title: 'videos.aws', href: 'https://www.youtube.com/embed/rIDNZrXMbIo' },
   Alexa: { title: 'videos.alexa', href: 'https://www.youtube.com/embed/Ueu4tOIse4I' },
@@ -20,7 +14,7 @@ const Videos: { [s: string]: Video } = Object.freeze({
   Unfurling: { title: 'videos.unfurling', href: 'https://www.youtube.com/embed/6zkWZg2-bEI' },
 });
 
-const getVideos = (t: i18next.TFunction): ReactElement[] => {
+const getVideos = (): ReactElement[] => {
   const videos: ReactElement[] = [];
 
   for (const video of Object.keys(Videos)) {
@@ -33,8 +27,7 @@ const getVideos = (t: i18next.TFunction): ReactElement[] => {
 };
 
 const Lectures = () => {
-  const { t } = useTranslation();
-  const videos = getVideos(t);
+  const videos = getVideos();
 
   return (
     <>

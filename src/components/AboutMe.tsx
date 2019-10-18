@@ -1,10 +1,8 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
+import { t } from '../utils/i18n';
 
 const AboutMe = () => {
-  const { t } = useTranslation();
-
   return (
     <div>
       <Typography id="about" variant="h4" gutterBottom>

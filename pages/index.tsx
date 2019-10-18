@@ -1,18 +1,17 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, useMediaQuery, useTheme } from '@material-ui/core';
-import Navigation from './components/Navigation';
+import Navigation from '../src/components/Navigation';
 import Container from '@material-ui/core/Container';
-import AboutMe from './components/AboutMe';
-import Contact from './components/Contact';
-import Lectures from './components/Lectures';
-import Footer from './components/Footer';
-import { useTranslation } from 'react-i18next';
-import { menuLinkStyle } from './styles/commonStyles';
+import AboutMe from '../src/components/AboutMe';
+import Contact from '../src/components/Contact';
+import Lectures from '../src/components/Lectures';
+import Footer from '../src/components/Footer';
+import { menuLinkStyle } from '../src/styles/commonStyles';
+import { t } from '../src/utils/i18n';
 
 const App = () => {
   const theme = useTheme();
   const isLg = useMediaQuery(theme.breakpoints.up('lg'));
-  const { t } = useTranslation();
 
   return (
     <div>
