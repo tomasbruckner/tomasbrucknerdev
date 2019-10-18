@@ -23,6 +23,7 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
           <link rel="manifest" href="/static/site.webmanifest" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145274106-1" />
+          {/* eslint-disable react/no-danger */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -35,6 +36,7 @@ class MyDocument extends Document {
     `,
             }}
           />
+          {/* eslint-enable react/no-danger */}
           <Meta />
           <title>Tomáš Bruckner</title>
         </Head>
