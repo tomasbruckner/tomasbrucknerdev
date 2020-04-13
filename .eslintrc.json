@@ -37,6 +37,16 @@
     "react/jsx-props-no-spreading": "off",
     "import/order": "off",
     "no-restricted-syntax": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {

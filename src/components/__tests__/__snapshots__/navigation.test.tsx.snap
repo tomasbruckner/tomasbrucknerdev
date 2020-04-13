@@ -27,7 +27,6 @@ exports[`Navigation renders correctly 1`] = `
         aria-hidden="true"
         className="MuiSvgIcon-root"
         focusable="false"
-        role="presentation"
         style={
           Object {
             "fill": "white",

@@ -18,6 +18,9 @@ const translations = {
       },
       videos: {
         unfurling: 'Unfurling - How to improve your website preview (czech audio)',
+        neuron: 'Introduction to Neural Networks',
+        microservices: 'Introduction to Microservices',
+        microfrontend: 'Introduction to Microfrontend pattern',
         babel: 'Babel - Writing our first plugin (czech audio)',
         aws: 'AWS - The most interesting parts (czech audio)',
         alexa: 'Alexa - First application (czech audio)',
@@ -45,6 +48,9 @@ const translations = {
       },
       videos: {
         unfurling: 'Unfurling - Jak definovat preview webové stránky',
+        neuron: 'Neuronové sítě',
+        microservices: 'Microservisy',
+        microfrontend: 'Microfrontendy',
         babel: 'Babel - Jak si udělat vlastní plugin',
         aws: 'AWS - To nejzajímavější',
         alexa: 'Alexa - Jak si udělat vlastní aplikaci',

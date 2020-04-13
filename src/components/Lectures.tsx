@@ -4,6 +4,15 @@ import VideoCard from './VideoCard';
 import { Typography } from '@material-ui/core';
 
 const Videos = Object.freeze({
+  Microfrontend: {
+    title: 'videos.microfrontend',
+    href: 'https://www.youtube.com/embed/kmeFVANlHmU',
+  },
+  Microservices: {
+    title: 'videos.microservices',
+    href: 'https://www.youtube.com/embed/04-iN3DdIKQ',
+  },
+  Neuron: { title: 'videos.neuron', href: 'https://www.youtube.com/embed/vXn3JDmjzVE' },
   Babel: { title: 'videos.babel', href: 'https://www.youtube.com/embed/Me82U4c6K3s' },
   Aws: { title: 'videos.aws', href: 'https://www.youtube.com/embed/rIDNZrXMbIo' },
   Alexa: { title: 'videos.alexa', href: 'https://www.youtube.com/embed/Ueu4tOIse4I' },
