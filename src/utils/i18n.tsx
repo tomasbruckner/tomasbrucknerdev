@@ -4,7 +4,7 @@ const translations = {
   en: {
     translation: {
       footer: {
-        copyright: 'Tomáš Bruckner © 2018 - 2019',
+        copyright: 'Tomáš Bruckner © 2018 - 2020',
       },
       pageTitle: ' Tomáš Bruckner',
       navigation: {
@@ -21,6 +21,7 @@ const translations = {
         neuron: 'Introduction to Neural Networks',
         microservices: 'Introduction to Microservices',
         microfrontend: 'Introduction to Microfrontend pattern',
+        garbagecollector: 'Garbage Collectors',
         babel: 'Babel - Writing our first plugin (czech audio)',
         aws: 'AWS - The most interesting parts (czech audio)',
         alexa: 'Alexa - First application (czech audio)',
@@ -34,7 +35,7 @@ const translations = {
   cs: {
     translation: {
       footer: {
-        copyright: 'Tomáš Bruckner © 2018 - 2019',
+        copyright: 'Tomáš Bruckner © 2018 - 2020',
       },
       pageTitle: ' Tomáš Bruckner',
       navigation: {
@@ -51,6 +52,7 @@ const translations = {
         neuron: 'Neuronové sítě',
         microservices: 'Microservisy',
         microfrontend: 'Microfrontendy',
+        garbagecollector: 'Garbage Collectory',
         babel: 'Babel - Jak si udělat vlastní plugin',
         aws: 'AWS - To nejzajímavější',
         alexa: 'Alexa - Jak si udělat vlastní aplikaci',

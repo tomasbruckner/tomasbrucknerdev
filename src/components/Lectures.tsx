@@ -4,6 +4,10 @@ import VideoCard from './VideoCard';
 import { Typography } from '@material-ui/core';
 
 const Videos = Object.freeze({
+  GarbageCollector: {
+    title: 'videos.garbagecollector',
+    href: 'https://www.youtube.com/embed/MuHCvf7WZys',
+  },
   Microfrontend: {
     title: 'videos.microfrontend',
     href: 'https://www.youtube.com/embed/kmeFVANlHmU',
