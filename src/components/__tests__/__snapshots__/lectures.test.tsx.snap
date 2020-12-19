@@ -3,407 +3,226 @@
 exports[`Lectures renders correctly 1`] = `
 Array [
   <h4
-    className="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    className="MuiTypography-root makeStyles-text-1 MuiTypography-h4 MuiTypography-gutterBottom"
     id="lectures"
-    style={
-      Object {
-        "marginTop": "1em",
-      }
-    }
   >
     Lekce
   </h4>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Microfrontendy
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/kmeFVANlHmU"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Microfrontendy"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Microservisy
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/04-iN3DdIKQ"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Microservisy"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Neuronové sítě
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/vXn3JDmjzVE"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Neuronové sítě"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Babel - Jak si udělat vlastní plugin
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/Me82U4c6K3s"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Babel - Jak si udělat vlastní plugin"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         AWS - To nejzajímavější
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/rIDNZrXMbIo"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="AWS - To nejzajímavější"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Alexa - Jak si udělat vlastní aplikaci
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/Ueu4tOIse4I"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Alexa - Jak si udělat vlastní aplikaci"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         MongoDB - Část 2
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/Mil2i6erarY"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="MongoDB - Část 2"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         MongoDB - Část 1
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/rDk_T_F34-w"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="MongoDB - Část 1"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Docker - Performance problém na Windows a OSX a jak ho řešit
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/h2kA2RlLzOs"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Docker - Performance problém na Windows a OSX a jak ho řešit"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         AdonisJS - Případová studie
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/wrfG8fhm5fE"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="AdonisJS - Případová studie"
         width="100%"
       />
     </div>
   </div>,
   <div
-    className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style={
-      Object {
-        "marginBottom": "48px",
-        "marginTop": "48px",
-        "minWidth": 275,
-      }
-    }
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       className="MuiCardContent-root"
     >
       <h2
-        className="MuiTypography-root MuiTypography-h5"
-        style={
-          Object {
-            "marginBottom": "16px",
-          }
-        }
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
         Unfurling - Jak definovat preview webové stránky
       </h2>
       <iframe
+        className="makeStyles-iframe-4"
         height="440"
         src="https://www.youtube.com/embed/6zkWZg2-bEI"
-        style={
-          Object {
-            "borderWidth": 0,
-          }
-        }
         title="Unfurling - Jak definovat preview webové stránky"
         width="100%"
       />

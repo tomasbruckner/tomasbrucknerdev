@@ -25,13 +25,8 @@ exports[`Navigation renders correctly 1`] = `
     >
       <svg
         aria-hidden={true}
-        className="MuiSvgIcon-root"
+        className="MuiSvgIcon-root makeStyles-menuIcon-1"
         focusable="false"
-        style={
-          Object {
-            "fill": "white",
-          }
-        }
         viewBox="0 0 24 24"
       >
         <path
