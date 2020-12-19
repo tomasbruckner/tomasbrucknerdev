@@ -1,15 +1,36 @@
 import React from 'react';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Meta from '../src/components/Meta';
+import { ServerStyleSheets } from '@material-ui/core/styles';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+    const sheets = new ServerStyleSheets();
+    const originalRenderPage = ctx.renderPage;
+
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+      });
+
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+
+    return {
+      ...initialProps,
+      // Styles fragment is rendered after the app and page rendering finish.
+      styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    };
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="cs">
         <Head>
@@ -38,7 +59,6 @@ class MyDocument extends Document {
           />
           {/* eslint-enable react/no-danger */}
           <Meta />
-          <title>Tomáš Bruckner</title>
         </Head>
         <style jsx global>{`
           html,

@@ -1,29 +1,39 @@
-import React from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
+import React, { FC } from 'react';
+import { Card, CardContent, makeStyles, Typography } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  card: {
+    minWidth: 275,
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(6),
+  },
+  h2: {
+    marginBottom: theme.spacing(2),
+  },
+  iframe: {
+    borderWidth: 0,
+  },
+}));
 
 interface Props {
   videoUrl: string;
   videoHeadline: string;
 }
 
-const VideoCard = ({ videoUrl, videoHeadline }: Props) => {
+const VideoCard: FC<Props> = ({ videoUrl, videoHeadline }: Props) => {
+  const classes = useStyles();
+
   return (
-    <Card
-      style={{
-        minWidth: 275,
-        marginTop: '48px',
-        marginBottom: '48px',
-      }}
-    >
+    <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h5" component="h2" style={{ marginBottom: '16px' }}>
+        <Typography variant="h5" component="h2" className={classes.h2}>
           {videoHeadline}
         </Typography>
         <iframe
           title={videoHeadline}
           width="100%"
           height="440"
-          style={{ borderWidth: 0 }}
+          className={classes.iframe}
           src={videoUrl}
         />
       </CardContent>

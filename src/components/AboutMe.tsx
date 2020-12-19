@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Typography } from '@material-ui/core';
 import { t } from '../utils/i18n';
 
-const AboutMe = () => {
+const AboutMe: FC = () => {
   return (
     <div>
       <Typography id="about" variant="h4" gutterBottom>

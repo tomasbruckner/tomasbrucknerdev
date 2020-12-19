@@ -1,27 +1,35 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/ViewHeadline';
 import IconButton from '@material-ui/core/IconButton';
-import { useMediaQuery, useTheme } from '@material-ui/core';
-import { menuLinkStyle } from '../styles/commonStyles';
+import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import { useCommonStyles } from '../styles/commonStyles';
 import { t } from '../utils/i18n';
 
-const Navigation = () => {
+const useStyles = makeStyles((theme) => ({
+  menuIcon: {
+    fill: theme.palette.common.white,
+  },
+}));
+
+const Navigation: FC = () => {
   const [anchor, setAnchor] = useState<HTMLElement | null>(null);
   const theme = useTheme();
   const isLg = useMediaQuery(theme.breakpoints.up('lg'));
+  const classes = useStyles();
+  const commonClasses = useCommonStyles();
 
   if (isLg) {
     return (
       <>
-        <a style={menuLinkStyle} href="#about">
+        <a className={commonClasses.menuLinkStyle} href="#about">
           {t('navigation.about')}
         </a>
-        <a style={menuLinkStyle} href="#contact">
+        <a className={commonClasses.menuLinkStyle} href="#contact">
           {t('navigation.contact')}
         </a>
-        <a style={menuLinkStyle} href="#lectures">
+        <a className={commonClasses.menuLinkStyle} href="#lectures">
           {t('navigation.lectures')}
         </a>
       </>
@@ -33,7 +41,7 @@ const Navigation = () => {
       <IconButton
         onClick={(event: React.MouseEvent<HTMLElement>) => setAnchor(event.currentTarget)}
       >
-        <MenuIcon style={{ fill: 'white' }} />
+        <MenuIcon className={classes.menuIcon} />
       </IconButton>
       <Menu
         open={!!anchor}

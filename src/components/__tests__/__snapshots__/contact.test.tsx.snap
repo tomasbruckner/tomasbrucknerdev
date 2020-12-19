@@ -3,28 +3,16 @@
 exports[`Contact renders correctly 1`] = `
 Array [
   <h4
-    className="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    className="MuiTypography-root makeStyles-text-2 MuiTypography-h4 MuiTypography-gutterBottom"
     id="contact"
-    style={
-      Object {
-        "marginTop": "1em",
-      }
-    }
   >
     Kontakt
   </h4>,
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "marginTop": "1em",
-      }
-    }
+    className="MuiTypography-root makeStyles-contact-1 MuiTypography-body1 MuiTypography-gutterBottom"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
@@ -34,30 +22,17 @@ Array [
       />
     </svg>
     <a
+      className="makeStyles-linkStyle-4"
       href="https://github.com/tomasbruckner"
-      style={
-        Object {
-          "color": "#0089eb",
-          "marginLeft": "1em",
-          "textDecoration": "none",
-        }
-      }
     >
       github.com/tomasbruckner
     </a>
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "marginTop": "1em",
-      }
-    }
+    className="MuiTypography-root makeStyles-contact-1 MuiTypography-body1 MuiTypography-gutterBottom"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 120 120"
@@ -80,30 +55,17 @@ Array [
       />
     </svg>
     <a
+      className="makeStyles-linkStyle-4"
       href="https://stackoverflow.com/users/3323141/tomas-bruckner"
-      style={
-        Object {
-          "color": "#0089eb",
-          "marginLeft": "1em",
-          "textDecoration": "none",
-        }
-      }
     >
       stackoverflow.com/users/3323141
     </a>
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "marginTop": "1em",
-      }
-    }
+    className="MuiTypography-root makeStyles-contact-1 MuiTypography-body1 MuiTypography-gutterBottom"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root"
       clipRule="evenodd"
       fillRule="evenodd"
@@ -115,30 +77,17 @@ Array [
       />
     </svg>
     <a
+      className="makeStyles-linkStyle-4"
       href="https://medium.com/@tomasbruckner"
-      style={
-        Object {
-          "color": "#0089eb",
-          "marginLeft": "1em",
-          "textDecoration": "none",
-        }
-      }
     >
       medium.com/@tomasbruckner
     </a>
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "marginTop": "1em",
-      }
-    }
+    className="MuiTypography-root makeStyles-contact-1 MuiTypography-body1 MuiTypography-gutterBottom"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
@@ -148,30 +97,17 @@ Array [
       />
     </svg>
     <a
+      className="makeStyles-linkStyle-4"
       href="https://www.linkedin.com/in/tomasbruckner"
-      style={
-        Object {
-          "color": "#0089eb",
-          "marginLeft": "1em",
-          "textDecoration": "none",
-        }
-      }
     >
       linkedin.com/in/tomasbruckner
     </a>
   </p>,
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "marginTop": "1em",
-      }
-    }
+    className="MuiTypography-root makeStyles-contact-1 MuiTypography-body1 MuiTypography-gutterBottom"
   >
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
@@ -182,14 +118,8 @@ Array [
       />
     </svg>
     <a
+      className="makeStyles-linkStyle-4"
       href="mailto:tomasbrucknermail@gmail.com"
-      style={
-        Object {
-          "color": "#0089eb",
-          "marginLeft": "1em",
-          "textDecoration": "none",
-        }
-      }
     >
       tomasbrucknermail@gmail.com
     </a>

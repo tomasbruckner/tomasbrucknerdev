@@ -1,7 +1,7 @@
 import SvgIcon, { SvgIconProps } from '@material-ui/core/SvgIcon';
-import React from 'react';
+import React, { FC } from 'react';
 
-const GithubIcon = (props: SvgIconProps) => {
+const GithubIcon: FC<SvgIconProps> = (props: SvgIconProps) => {
   return (
     <SvgIcon viewBox="0 0 120 120" {...props}>
       <path style={{ fill: '#bcbbbb' }} d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z" />

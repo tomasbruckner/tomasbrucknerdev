@@ -1,5 +1,8 @@
 import get from 'lodash/get';
 
+type Languages = 'en' | 'cs';
+type Namespaces = 'translation';
+
 const translations = {
   en: {
     translation: {
@@ -63,19 +66,19 @@ const translations = {
       },
     },
   },
-};
+} as const;
 
-let language = 'cs';
-let namespace = 'translation';
+let language: Languages = 'cs';
+let namespace: Namespaces = 'translation';
 
-export const t = key => {
+export const t = (key: string): string => {
   return get(translations, [language, namespace, ...key.split('.')], key);
 };
 
-export const changeLanguage = lang => {
+export const changeLanguage = (lang: Languages): void => {
   language = lang;
 };
 
-export const changeNamespace = ns => {
+export const changeNamespace = (ns: Namespaces): void => {
   namespace = ns;
 };

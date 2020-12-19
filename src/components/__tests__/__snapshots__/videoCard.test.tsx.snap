@@ -2,36 +2,20 @@
 
 exports[`VideoCard renders correctly 1`] = `
 <div
-  className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-  style={
-    Object {
-      "marginBottom": "48px",
-      "marginTop": "48px",
-      "minWidth": 275,
-    }
-  }
+  className="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
   >
     <h2
-      className="MuiTypography-root MuiTypography-h5"
-      style={
-        Object {
-          "marginBottom": "16px",
-        }
-      }
+      className="MuiTypography-root makeStyles-h2-2 MuiTypography-h5"
     >
       testVideoHeadline
     </h2>
     <iframe
+      className="makeStyles-iframe-3"
       height="440"
       src="testVideoUrl"
-      style={
-        Object {
-          "borderWidth": 0,
-        }
-      }
       title="testVideoHeadline"
       width="100%"
     />
