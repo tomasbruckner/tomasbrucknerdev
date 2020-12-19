@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { FC } from 'react';
 import { t } from '../utils/i18n';
 import VideoCard from './VideoCard';
-import { Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 
 const Videos = Object.freeze({
   Microfrontend: {
@@ -21,29 +21,27 @@ const Videos = Object.freeze({
   Docker: { title: 'videos.docker', href: 'https://www.youtube.com/embed/h2kA2RlLzOs' },
   Adonis: { title: 'videos.adonis', href: 'https://www.youtube.com/embed/wrfG8fhm5fE' },
   Unfurling: { title: 'videos.unfurling', href: 'https://www.youtube.com/embed/6zkWZg2-bEI' },
-});
+} as const);
 
-const getVideos = (): ReactElement[] => {
-  const videos: ReactElement[] = [];
+const useStyles = makeStyles((theme) => ({
+  text: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
-  for (const video of Object.keys(Videos)) {
-    const { title, href } = Videos[video];
-
-    videos.push(<VideoCard videoUrl={href} videoHeadline={t(title)} key={title} />);
-  }
-
-  return videos;
-};
-
-const Lectures = () => {
-  const videos = getVideos();
+const Lectures: FC = () => {
+  const classes = useStyles();
 
   return (
     <>
-      <Typography variant="h4" id="lectures" gutterBottom style={{ marginTop: '1em' }}>
+      <Typography variant="h4" id="lectures" gutterBottom className={classes.text}>
         {t('navigation.lectures')}
       </Typography>
-      {videos}
+      {Object.keys(Videos).map((v) => {
+        const { title, href } = Videos[v];
+
+        return <VideoCard videoUrl={href} videoHeadline={t(title)} key={title} />;
+      })}
     </>
   );
 };

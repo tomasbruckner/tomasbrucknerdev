@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Meta = () => {
+const Meta: FC = () => {
   return (
     <>
       <meta charSet="utf-8" />
