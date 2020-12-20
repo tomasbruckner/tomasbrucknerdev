@@ -17,6 +17,26 @@ Array [
       <h2
         className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
       >
+        Garbage Collectory
+      </h2>
+      <iframe
+        className="makeStyles-iframe-4"
+        height="440"
+        src="https://www.youtube.com/embed/MuHCvf7WZys"
+        title="Garbage Collectory"
+        width="100%"
+      />
+    </div>
+  </div>,
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-card-2 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardContent-root"
+    >
+      <h2
+        className="MuiTypography-root makeStyles-h2-3 MuiTypography-h5"
+      >
         Microfrontendy
       </h2>
       <iframe
