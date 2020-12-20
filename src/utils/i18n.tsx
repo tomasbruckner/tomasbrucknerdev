@@ -7,7 +7,7 @@ const translations = {
   en: {
     translation: {
       footer: {
-        copyright: 'Tomáš Bruckner © 2018 - 2020',
+        copyright: 'Tomáš Bruckner © 2018 - 2021',
       },
       pageTitle: ' Tomáš Bruckner',
       navigation: {
@@ -38,7 +38,7 @@ const translations = {
   cs: {
     translation: {
       footer: {
-        copyright: 'Tomáš Bruckner © 2018 - 2020',
+        copyright: 'Tomáš Bruckner © 2018 - 2021',
       },
       pageTitle: ' Tomáš Bruckner',
       navigation: {

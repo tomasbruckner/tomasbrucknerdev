@@ -73,6 +73,7 @@ class MyDocument extends Document {
           body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            margin: 0px;
             font-size: 16px;
             font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
             background-color: #f6f6f6;

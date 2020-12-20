@@ -7,7 +7,6 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <>
-        {' '}
         <Head>
           <title>Tomáš Bruckner</title>
         </Head>
