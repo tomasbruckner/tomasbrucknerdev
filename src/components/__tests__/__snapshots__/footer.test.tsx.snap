@@ -8,7 +8,7 @@ exports[`Footer renders correctly 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1"
     >
-      Tomáš Bruckner © 2018 - 2019
+      Tomáš Bruckner © 2018 - 2021
     </p>
   </div>
 </footer>
