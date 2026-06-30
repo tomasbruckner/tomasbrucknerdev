@@ -42,8 +42,10 @@ push-to-deploy.
 
 ## Analytics
 
-Cloudflare Web Analytics: enable it in the dashboard (Web Analytics → add site), copy the
-token, and set `CF_ANALYTICS_TOKEN` in `src/consts.ts`. Empty string disables the beacon.
+Cloudflare Web Analytics is enabled via **automatic injection** (the site is proxied through
+Cloudflare), so there is nothing to configure in code and `CF_ANALYTICS_TOKEN` in `src/consts.ts`
+stays empty. Alternative: set `CF_ANALYTICS_TOKEN` to use the in-code beacon instead — do not
+enable both, or page views get counted twice.
 
 ## Content
 

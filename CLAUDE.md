@@ -35,4 +35,4 @@ Run a single e2e test: `npx playwright test -g "theme toggle"`
 
 ## Deploy
 
-Cloudflare Pages, Astro preset, build `npm run build`, output `dist`. Push to `master` = production; PRs get previews. CI (`.github/workflows/ci.yml`) runs check + unit + build + playwright.
+Cloudflare Pages via **Wrangler direct upload** — run `./deploy.ps1` (builds, then `wrangler pages deploy dist`). NOT git-connected: pushing to `master` does **not** auto-deploy; the live site only updates when you run the deploy script. Live at https://tomasbruckner.dev (`www` 301-redirects to the apex via a Cloudflare Redirect Rule). CI (`.github/workflows/ci.yml`) runs check + unit + build + playwright on PRs. Analytics: Cloudflare Web Analytics via automatic injection (site is proxied), so `CF_ANALYTICS_TOKEN` in `src/consts.ts` stays empty — setting it too would double-count.
