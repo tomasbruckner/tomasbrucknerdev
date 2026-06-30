@@ -1,8 +1,5 @@
 node_modules
 .idea
-.next
-out
-.firebase
 
 .superpowers
 dist
