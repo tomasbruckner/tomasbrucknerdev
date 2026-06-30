@@ -1,0 +1,26 @@
+---
+import { useTranslations, type Lang } from '../i18n/util';
+import { EMAIL, SOCIALS } from '../consts';
+import CopyEmail from './CopyEmail.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const links = [
+  { href: `mailto:${EMAIL}`, label: EMAIL },
+  { href: SOCIALS.linkedin, label: 'linkedin.com/in/tomasbruckner' },
+  { href: SOCIALS.github, label: 'github.com/tomasbruckner' },
+  { href: SOCIALS.stackoverflow, label: 'stackoverflow.com/users/3323141' },
+  { href: SOCIALS.medium, label: 'medium.com/@tomasbruckner' },
+];
+---
+<section id="contact" class="scroll-mt-20 py-16">
+  <h2 class="mb-8 text-2xl font-bold tracking-tight">{t.contact.heading}</h2>
+  <ul class="space-y-3">
+    {links.map((l) => (
+      <li>
+        <a href={l.href} class="text-[var(--color-accent)] hover:underline" rel="me noopener" target={l.href.startsWith('mailto') ? undefined : '_blank'}>{l.label}</a>
+      </li>
+    ))}
+  </ul>
+  <div class="mt-6"><CopyEmail lang={lang} /></div>
+</section>
