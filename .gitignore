@@ -5,3 +5,7 @@ out
 .firebase
 
 .superpowers
+dist
+.astro
+test-results
+playwright-report
