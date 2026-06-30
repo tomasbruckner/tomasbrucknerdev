@@ -1,0 +1,20 @@
+# Tomáš Bruckner
+
+> Software engineer, web developer and consultant specializing in React, Node.js, MongoDB and AWS. Offers development, project analysis, dev-process setup and tailor-made trainings.
+
+## About
+Tomáš Bruckner is a software engineer and consultant. He builds web applications with React and Node.js, designs and optimizes MongoDB, and deploys on AWS. He works with startups and established companies as a senior developer/consultant, and delivers tailor-made team trainings.
+
+## Site
+- Home (Czech): https://tomasbruckner.dev/
+- Home (English): https://tomasbruckner.dev/en/
+
+## Contact
+- Email: tomasbrucknermail@gmail.com
+- LinkedIn: https://www.linkedin.com/in/tomasbruckner
+- GitHub: https://github.com/tomasbruckner
+- StackOverflow: https://stackoverflow.com/users/3323141/tomas-bruckner
+- Medium: https://medium.com/@tomasbruckner
+
+## Lectures
+A collection of recorded talks (mostly Czech audio) on neural networks, microservices, micro-frontends, garbage collectors, Babel, AWS, Alexa, MongoDB, Docker and AdonisJS, available on the site.
