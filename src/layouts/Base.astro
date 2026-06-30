@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import { useTranslations, altLang, getAltLangUrl, type Lang } from '../i18n/util';
+import { SITE_URL, SOCIALS, EMAIL, CF_ANALYTICS_TOKEN } from '../consts';
+import JsonLd from '../components/JsonLd.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const altUrl = new URL(getAltLangUrl(lang), SITE_URL).href;
+const ogImage = new URL('/og-image.png', SITE_URL).href;
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Tomáš Bruckner',
+  url: SITE_URL,
+  email: `mailto:${EMAIL}`,
+  jobTitle: lang === 'cs' ? 'Softwarový inženýr a konzultant' : 'Software engineer and consultant',
+  knowsAbout: ['React', 'Node.js', 'MongoDB', 'AWS', 'TypeScript'],
+  sameAs: [SOCIALS.github, SOCIALS.stackoverflow, SOCIALS.medium, SOCIALS.linkedin],
+};
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Tomáš Bruckner',
+  description: t.meta.description,
+  url: SITE_URL,
+  areaServed: 'Worldwide',
+  provider: { '@type': 'Person', name: 'Tomáš Bruckner' },
+};
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={altLang(lang)} href={altUrl} />
+    <link rel="alternate" hreflang="x-default" href={SITE_URL + '/'} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tomáš Bruckner" />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={t.meta.ogLocale} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <JsonLd data={person} />
+    <JsonLd data={service} />
+
+    <script is:inline>
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+
+    {CF_ANALYTICS_TOKEN && (
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: CF_ANALYTICS_TOKEN })}
+      />
+    )}
+  </head>
+  <body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:p-3">
+      {lang === 'cs' ? 'Přeskočit na obsah' : 'Skip to content'}
+    </a>
+    <slot />
+  </body>
+</html>
