@@ -1,9 +1,9 @@
 # Tomáš Bruckner
 
-> Software engineer, web developer and consultant specializing in React, Node.js, MongoDB and AWS. Offers development, project analysis, dev-process setup and tailor-made trainings.
+> Software engineer, web developer and consultant. Offers development, project analysis, dev-process setup and tailor-made trainings.
 
 ## About
-Tomáš Bruckner is a software engineer and consultant. He builds web applications with React and Node.js, designs and optimizes MongoDB, and deploys on AWS. He works with startups and established companies as a senior developer/consultant, and delivers tailor-made team trainings.
+Tomáš Bruckner is a software engineer and consultant. He develops and analyzes web applications, sets up and optimizes development processes, works with startups and established companies as a senior developer/consultant, and delivers tailor-made team trainings.
 
 ## Site
 - Home (Czech): https://tomasbruckner.dev/

@@ -1,12 +1,10 @@
 ---
 import { useTranslations, type Lang } from '../i18n/util';
 import { EMAIL, SOCIALS } from '../consts';
-import CopyEmail from './CopyEmail.astro';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
-const links = [
-  { href: `mailto:${EMAIL}`, label: EMAIL },
+const socials = [
   { href: SOCIALS.linkedin, label: 'linkedin.com/in/tomasbruckner' },
   { href: SOCIALS.github, label: 'github.com/tomasbruckner' },
   { href: SOCIALS.stackoverflow, label: 'stackoverflow.com/users/3323141' },
@@ -16,11 +14,64 @@ const links = [
 <section id="contact" class="scroll-mt-20 py-16">
   <h2 class="mb-8 text-2xl font-bold tracking-tight">{t.contact.heading}</h2>
   <ul class="space-y-3">
-    {links.map((l) => (
+    <li class="group flex items-center gap-2">
+      <a href={`mailto:${EMAIL}`} class="text-[var(--color-accent)] hover:underline" rel="me">{EMAIL}</a>
+      <button
+        type="button"
+        id="copy-email"
+        data-email={EMAIL}
+        data-label={t.contact.copy}
+        data-copied={t.contact.copied}
+        aria-label={t.contact.copy}
+        class="copy-btn inline-flex items-center rounded-md p-1 text-zinc-400 opacity-0 transition hover:bg-zinc-100 hover:text-zinc-700 focus-visible:opacity-100 group-hover:opacity-100 dark:hover:bg-zinc-800 dark:hover:text-zinc-200"
+      >
+        <svg class="copy-icon h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="11" height="11" rx="2" />
+          <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+        </svg>
+        <svg class="check-icon hidden h-4 w-4 text-green-600 dark:text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+      </button>
+      <span class="copied-flag text-xs font-medium text-green-600 opacity-0 transition dark:text-green-500" role="status" aria-live="polite"></span>
+    </li>
+    {socials.map((l) => (
       <li>
-        <a href={l.href} class="text-[var(--color-accent)] hover:underline" rel="me noopener noreferrer" target={l.href.startsWith('mailto') ? undefined : '_blank'}>{l.label}</a>
+        <a href={l.href} class="text-[var(--color-accent)] hover:underline" rel="me noopener noreferrer" target="_blank">{l.label}</a>
       </li>
     ))}
   </ul>
-  <div class="mt-6"><CopyEmail lang={lang} /></div>
 </section>
+
+<script>
+  const btn = document.getElementById('copy-email') as HTMLButtonElement | null;
+  if (btn) {
+    const copyIcon = btn.querySelector('.copy-icon');
+    const checkIcon = btn.querySelector('.check-icon');
+    const flag = btn.parentElement?.querySelector('.copied-flag') as HTMLElement | null;
+    let timer: ReturnType<typeof setTimeout>;
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.email ?? '');
+      } catch {
+        return; // clipboard unavailable — give no false confirmation
+      }
+      copyIcon?.classList.add('hidden');
+      checkIcon?.classList.remove('hidden');
+      btn.style.opacity = '1';
+      btn.setAttribute('aria-label', btn.dataset.copied ?? '');
+      if (flag) {
+        flag.textContent = btn.dataset.copied ?? '';
+        flag.classList.remove('opacity-0');
+      }
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        copyIcon?.classList.remove('hidden');
+        checkIcon?.classList.add('hidden');
+        btn.style.opacity = '';
+        btn.setAttribute('aria-label', btn.dataset.label ?? '');
+        if (flag) flag.classList.add('opacity-0');
+      }, 1600);
+    });
+  }
+</script>

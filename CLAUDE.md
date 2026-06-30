@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal site for Tomáš Bruckner. Astro 5 + Tailwind 4, TypeScript, bilingual (cs default at `/`, en at `/en/`), static output, deployed to Cloudflare Pages. Single-page layout: Hero/About → Lectures → FAQ → Contact.
+Personal site for Tomáš Bruckner. Astro 5 + Tailwind 4, TypeScript, bilingual (cs default at `/`, en at `/en/`), static output, deployed to Cloudflare Pages. Single-page layout: Hero/About → Lectures → Contact.
 
 ## Commands
 
@@ -20,10 +20,10 @@ Run a single e2e test: `npx playwright test -g "theme toggle"`
 
 ## Architecture
 
-- **Zero-JS default.** Only four interactive islands, each a small `<script>` in its `.astro` component: `ThemeToggle`, `LangSwitch` (just a link), mobile menu (in `Nav`), `CopyEmail`. No UI-framework runtime.
+- **Zero-JS default.** Only four interactive islands, each a small `<script>` in its `.astro` component: `ThemeToggle`, `LangSwitch` (just a link), mobile menu (in `Nav`), and the hover-reveal copy-email button (in `Contact`). No UI-framework runtime.
 - **i18n is type-driven.** `src/i18n/cs.ts` is the source of truth; `src/i18n/en.ts` is typed `typeof cs`, so a missing/renamed key fails `astro check`. `useTranslations(lang)` returns the dictionary; access keys as typed properties (`t.nav.about`), not string paths. Locale comes from the route, never a mutable global.
 - **Content is data.** Videos in `src/data/lectures.ts` (id + i18n key), FAQ in `src/data/faq.ts`; titles/answers live in the dictionaries. Site constants (email, socials, URL, analytics token) in `src/consts.ts`.
-- **SEO/AI-search.** `Base.astro` emits per-locale title/description, canonical, hreflang (cs/en/x-default), OpenGraph/Twitter, and JSON-LD (Person, ProfessionalService). `Lectures` emits one `VideoObject` per talk; `Faq` emits `FAQPage`. `public/robots.txt` allows AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); `public/llms.txt` summarizes the site; sitemap via `@astrojs/sitemap`.
+- **SEO/AI-search.** `Base.astro` emits per-locale title/description, canonical, hreflang (cs/en/x-default), OpenGraph/Twitter, and JSON-LD (Person, ProfessionalService). `Lectures` emits one `VideoObject` per talk. `public/robots.txt` allows AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); `public/llms.txt` summarizes the site; sitemap via `@astrojs/sitemap`.
 - **Theme.** Class-based dark mode (`.dark` on `<html>`). Inline `<head>` bootstrap in `Base.astro` applies the stored/`prefers-color-scheme` choice before paint; `ThemeToggle` persists to `localStorage.theme`.
 - **Video performance.** `VideoCard` is a lite-embed: thumbnail + play button; the real `youtube-nocookie` iframe is injected only on click.
 

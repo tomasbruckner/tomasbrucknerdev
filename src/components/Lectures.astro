@@ -18,7 +18,7 @@ const videoLd = LECTURES.map((l) => ({
 ---
 <section id="lectures" class="scroll-mt-20 py-16">
   <h2 class="mb-8 text-2xl font-bold tracking-tight">{t.lectures.heading}</h2>
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {LECTURES.map((l) => (
       <VideoCard youtubeId={l.youtubeId} title={t.videos[l.key]} playLabel={t.lectures.play} />
     ))}

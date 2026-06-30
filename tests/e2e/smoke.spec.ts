@@ -37,17 +37,9 @@ test('video lite-embed injects an iframe on click', async ({ page }) => {
   await expect(page.locator('iframe[src*="youtube-nocookie.com/embed"]').first()).toBeVisible();
 });
 
-test('copy email button confirms', async ({ page, context }) => {
+test('copy email shows confirmation feedback on click', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   await page.goto('/');
-  const btn = page.locator('#copy-email');
-  await btn.click();
-  await expect(btn).toHaveText('Zkopírováno!');
-});
-
-test('faqpage json-ld is present', async ({ page }) => {
-  await page.goto('/');
-  const ld = page.locator('script[type="application/ld+json"]');
-  const contents = await ld.allTextContents();
-  expect(contents.some((c) => c.includes('"FAQPage"'))).toBe(true);
+  await page.locator('#copy-email').click();
+  await expect(page.locator('.copied-flag')).toHaveText('Zkopírováno!');
 });
