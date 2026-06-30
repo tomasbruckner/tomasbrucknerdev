@@ -27,8 +27,7 @@ const thumb = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
         const id = btn.getAttribute('data-id');
         const title = btn.getAttribute('data-title') ?? '';
         const iframe = document.createElement('iframe');
-        iframe.width = '100%';
-        iframe.height = '100%';
+        iframe.className = 'aspect-video w-full';
         iframe.title = title;
         iframe.allow =
           'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
