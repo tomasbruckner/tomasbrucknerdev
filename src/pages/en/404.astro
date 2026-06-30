@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { useTranslations } from '../../i18n/util';
+const lang = 'en' as const;
+const t = useTranslations(lang);
+---
+<Base lang={lang}>
+  <main id="main" class="mx-auto grid min-h-[70vh] max-w-3xl place-items-center px-4 text-center">
+    <div>
+      <h1 class="text-5xl font-bold">404</h1>
+      <p class="mt-4 text-lg font-medium">{t.notFound.title}</p>
+      <p class="mt-2 text-zinc-600 dark:text-zinc-400">{t.notFound.text}</p>
+      <a href="/en/" class="mt-8 inline-block text-[var(--color-accent)] hover:underline">{t.notFound.home}</a>
+    </div>
+  </main>
+</Base>
