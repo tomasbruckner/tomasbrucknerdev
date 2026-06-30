@@ -14,7 +14,21 @@ test('english home renders at /en/', async ({ page }) => {
 test('theme toggle adds dark class', async ({ page }) => {
   await page.goto('/');
   await page.locator('.theme-toggle').first().click();
-  await expect(page.locator('html')).toHaveClass(/dark/);
+  await expect(page.locator('html')).toHaveClass(/\bdark\b/);
+});
+
+test('mobile theme toggle (second instance) also works', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 800 });
+  await page.goto('/');
+  await page.locator('.theme-toggle').nth(1).click();
+  await expect(page.locator('html')).toHaveClass(/\bdark\b/);
+});
+
+test('language switch navigates to /en/', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('a[href="/en/"]').first().click();
+  await expect(page).toHaveURL(/\/en\/?$/);
+  await expect(page.locator('h1')).toContainText("Hi, I'm Tomáš Bruckner");
 });
 
 test('video lite-embed injects an iframe on click', async ({ page }) => {

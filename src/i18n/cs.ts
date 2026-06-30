@@ -5,7 +5,7 @@ export const cs = {
       'Tomáš Bruckner je softwarový inženýr, webový vývojář a konzultant se specializací na React, Node.js, MongoDB a AWS. Vývoj, analýzy projektů a školení na míru.',
     ogLocale: 'cs_CZ',
   },
-  nav: { about: 'O mně', lectures: 'Přednášky', contact: 'Kontakt' },
+  nav: { about: 'O mně', lectures: 'Přednášky', contact: 'Kontakt', menu: 'Nabídka' },
   hero: {
     greeting: 'Ahoj, jsem Tomáš Bruckner.',
     tagline: 'Softwarový inženýr & konzultant',

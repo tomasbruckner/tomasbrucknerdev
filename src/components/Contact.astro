@@ -18,7 +18,7 @@ const links = [
   <ul class="space-y-3">
     {links.map((l) => (
       <li>
-        <a href={l.href} class="text-[var(--color-accent)] hover:underline" rel="me noopener" target={l.href.startsWith('mailto') ? undefined : '_blank'}>{l.label}</a>
+        <a href={l.href} class="text-[var(--color-accent)] hover:underline" rel="me noopener noreferrer" target={l.href.startsWith('mailto') ? undefined : '_blank'}>{l.label}</a>
       </li>
     ))}
   </ul>

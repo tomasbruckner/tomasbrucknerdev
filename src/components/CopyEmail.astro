@@ -19,11 +19,13 @@ const t = useTranslations(lang);
 <script>
   const btn = document.getElementById('copy-email') as HTMLButtonElement | null;
   btn?.addEventListener('click', async () => {
-    await navigator.clipboard.writeText(btn.dataset.email ?? '');
-    const original = btn.dataset.copy ?? '';
-    btn.textContent = btn.dataset.copied ?? '';
-    setTimeout(() => {
-      btn.textContent = original;
-    }, 1500);
+    try {
+      await navigator.clipboard.writeText(btn.dataset.email ?? '');
+      const original = btn.dataset.copy ?? '';
+      btn.textContent = btn.dataset.copied ?? '';
+      setTimeout(() => { btn.textContent = original; }, 1500);
+    } catch {
+      /* clipboard unavailable — leave the label unchanged */
+    }
   });
 </script>

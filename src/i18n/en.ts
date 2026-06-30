@@ -7,7 +7,7 @@ export const en: typeof cs = {
       'Tomáš Bruckner is a software engineer, web developer and consultant specializing in React, Node.js, MongoDB and AWS. Development, project analysis and tailor-made trainings.',
     ogLocale: 'en_US',
   },
-  nav: { about: 'About', lectures: 'Lectures', contact: 'Contact' },
+  nav: { about: 'About', lectures: 'Lectures', contact: 'Contact', menu: 'Menu' },
   hero: {
     greeting: "Hi, I'm Tomáš Bruckner.",
     tagline: 'Software engineer & consultant',
