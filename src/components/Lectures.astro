@@ -1,0 +1,27 @@
+---
+import { useTranslations, type Lang } from '../i18n/util';
+import { LECTURES } from '../data/lectures';
+import VideoCard from './VideoCard.astro';
+import JsonLd from './JsonLd.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const videoLd = LECTURES.map((l) => ({
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: t.videos[l.key],
+  thumbnailUrl: `https://i.ytimg.com/vi/${l.youtubeId}/hqdefault.jpg`,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${l.youtubeId}`,
+  contentUrl: `https://www.youtube.com/watch?v=${l.youtubeId}`,
+}));
+---
+<section id="lectures" class="scroll-mt-20 py-16">
+  <h2 class="mb-8 text-2xl font-bold tracking-tight">{t.lectures.heading}</h2>
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    {LECTURES.map((l) => (
+      <VideoCard youtubeId={l.youtubeId} title={t.videos[l.key]} playLabel={t.lectures.play} />
+    ))}
+  </div>
+  {videoLd.map((d) => <JsonLd data={d} />)}
+</section>
