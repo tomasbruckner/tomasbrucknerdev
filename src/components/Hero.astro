@@ -1,0 +1,13 @@
+---
+import { useTranslations, type Lang } from '../i18n/util';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<section id="about" class="scroll-mt-20 py-16 text-center sm:py-24">
+  <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">{t.hero.greeting}</h1>
+  <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">{t.hero.tagline}</p>
+  <p class="mt-2 text-sm font-medium text-zinc-500">React · Node.js · MongoDB · AWS</p>
+  <p class="mx-auto mt-8 max-w-2xl text-balance leading-relaxed text-zinc-700 dark:text-zinc-300">{t.hero.about}</p>
+  <a href="#contact" class="mt-10 inline-block rounded-lg bg-[var(--color-accent)] px-6 py-3 font-medium text-white transition hover:opacity-90">{t.hero.cta} →</a>
+</section>
