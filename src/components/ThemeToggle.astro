@@ -6,19 +6,18 @@ const t = useTranslations(lang);
 ---
 <button
   type="button"
-  id="theme-toggle"
   aria-label={t.theme.toggle}
-  class="rounded-md p-2 text-zinc-600 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+  class="theme-toggle rounded-md p-2 text-zinc-600 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
 >
   <span class="block dark:hidden" aria-hidden="true">🌙</span>
   <span class="hidden dark:block" aria-hidden="true">☀️</span>
 </button>
 
 <script>
-  const btn = document.getElementById('theme-toggle');
-  btn?.addEventListener('click', () => {
-    const root = document.documentElement;
-    const isDark = root.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
   });
 </script>
