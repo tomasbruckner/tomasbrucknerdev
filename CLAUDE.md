@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal site for Tomáš Bruckner. Astro 5 + Tailwind 4, TypeScript, bilingual (cs default at `/`, en at `/en/`), static output, deployed to Cloudflare Pages. Single-page layout: Hero/About → Lectures → Contact.
+Personal site for Tomáš Bruckner. Astro 5 + Tailwind 4, TypeScript, bilingual (cs default at `/`, en at `/en/`), static output, deployed to Cloudflare Pages. Single-page layout: Hero/About → Lectures → Contact. Plus a bilingual blog under `/blog/` + `/en/blog/`.
 
 ## Commands
 
@@ -26,12 +26,14 @@ Run a single e2e test: `npx playwright test -g "theme toggle"`
 - **SEO/AI-search.** `Base.astro` emits per-locale title/description, canonical, hreflang (cs/en/x-default), OpenGraph/Twitter, and JSON-LD (Person, ProfessionalService). `Lectures` emits one `VideoObject` per talk. `public/robots.txt` allows AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); `public/llms.txt` summarizes the site; sitemap via `@astrojs/sitemap`.
 - **Theme.** Class-based dark mode (`.dark` on `<html>`). Inline `<head>` bootstrap in `Base.astro` applies the stored/`prefers-color-scheme` choice before paint; `ThemeToggle` persists to `localStorage.theme`.
 - **Video performance.** `VideoCard` is a lite-embed: thumbnail + play button; the real `youtube-nocookie` iframe is injected only on click.
+- **Blog.** Content collection defined in `src/content.config.ts` (glob loader over `src/content/blog/{cs,en}/<slug>.md`). cs↔en posts pair by identical filename/slug and must share `tags` + `pubDate`; this is a convention guarded at test time by `tests/unit/blog.test.ts`, not by the type system. Post images live alongside the collection in `src/assets/blog/<slug>/` and are referenced with relative Markdown paths. Reading time comes from a remark plugin (`src/lib/remark-reading-time.mjs`, wired in `astro.config.mjs`) that sets `remarkPluginFrontmatter.minutesRead`. Code blocks render via Shiki with a light/dark dual theme (`github-light`/`github-dark`, also configured in `astro.config.mjs`). Each locale gets its own RSS feed (`src/pages/rss.xml.ts`, `src/pages/en/rss.xml.ts`, via `@astrojs/rss`). Blog pages set per-page title/description/`ogType` through `Base.astro` props, and `BlogPost.astro` emits a `BlogPosting` JSON-LD block in addition to Base's Person/ProfessionalService.
 
 ## Conventions
 
 - Add/edit copy only in `src/i18n/{cs,en}.ts` (keep shapes identical).
 - New section = new `.astro` in `src/components/`, take a `lang: Lang` prop, wire into both `src/pages/index.astro` and `src/pages/en/index.astro`.
 - Dark styles via Tailwind `dark:` variant; accent color is `--color-accent` (defined in `src/styles/global.css`).
+- New blog post = two Markdown files, `src/content/blog/cs/<slug>.md` + `src/content/blog/en/<slug>.md`, same filename/slug, identical `tags` + `pubDate`, sharing images in `src/assets/blog/<slug>/` referenced by relative path. Frontmatter: `title`, `description`, `pubDate`, `tags` (+ optional `draft`).
 
 ## Deploy
 
