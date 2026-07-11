@@ -1,0 +1,14 @@
+---
+import type { Lang } from '../i18n/util';
+import { blogUrl } from '../lib/blog';
+interface Props { tags: string[]; lang: Lang }
+const { tags, lang } = Astro.props;
+---
+{tags.map((tag) => (
+  <a
+    href={blogUrl(lang, 'tag/' + tag + '/')}
+    class="rounded-full border border-zinc-300 px-2.5 py-0.5 text-xs text-zinc-600 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] dark:border-zinc-700 dark:text-zinc-300"
+  >
+    {tag}
+  </a>
+))}

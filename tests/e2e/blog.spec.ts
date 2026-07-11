@@ -110,14 +110,15 @@ test.describe('blog nav integration', () => {
   test('from /blog/, "O mně" nav link lands on /#about', async ({ page }) => {
     await page.goto('/blog/');
     await page.getByRole('link', { name: 'O mně', exact: true }).click();
-    await expect(page).toHaveURL(/\/#about$/);
+    await expect.poll(() => new URL(page.url()).pathname).toBe('/');
+    await expect.poll(() => new URL(page.url()).hash).toBe('#about');
     await expect(page.locator('h1')).toContainText('Tomáš Bruckner');
   });
 
   test('from /, "Blog" nav link lands on /blog/', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Blog', exact: true }).click();
-    await expect(page).toHaveURL(/\/blog\/?$/);
+    await expect.poll(() => new URL(page.url()).pathname).toBe('/blog/');
     await expect(page.locator('h1')).toHaveText('Blog');
   });
 });

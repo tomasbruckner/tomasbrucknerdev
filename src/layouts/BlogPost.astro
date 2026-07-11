@@ -4,10 +4,11 @@ import Base from './Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
+import TagList from '../components/TagList.astro';
 import { useTranslations, type Lang } from '../i18n/util';
 import { blogUrl, type BlogPost as BlogPostEntry } from '../lib/blog';
-import { formatDate } from '../lib/format';
-import { SITE_URL } from '../consts';
+import { formatDate, localeCode } from '../lib/format';
+import { SITE_URL, SITE_NAME } from '../consts';
 
 interface Props { lang: Lang; post: BlogPostEntry }
 const { lang, post } = Astro.props;
@@ -20,13 +21,26 @@ const postLd = {
   headline: post.data.title,
   description: post.data.description,
   datePublished: post.data.pubDate.toISOString(),
-  author: { '@type': 'Person', name: 'Tomáš Bruckner', url: SITE_URL },
-  inLanguage: lang === 'cs' ? 'cs-CZ' : 'en-US',
+  ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
+  author: { '@type': 'Person', name: SITE_NAME, url: SITE_URL },
+  inLanguage: localeCode(lang),
   mainEntityOfPage: new URL(Astro.url.pathname, SITE_URL).href,
   image: new URL('/og-image.png', SITE_URL).href,
 };
+
+const article = {
+  publishedTime: post.data.pubDate.toISOString(),
+  ...(post.data.updatedDate && { modifiedTime: post.data.updatedDate.toISOString() }),
+  tags: post.data.tags,
+};
 ---
-<Base lang={lang} title={post.data.title + ' — Tomáš Bruckner'} description={post.data.description} ogType="article">
+<Base
+  lang={lang}
+  title={`${post.data.title} — ${SITE_NAME}`}
+  description={post.data.description}
+  ogType="article"
+  article={article}
+>
   <Nav lang={lang} />
   <main id="main" class="mx-auto max-w-3xl px-4">
     <article class="prose prose-zinc max-w-none py-16 dark:prose-invert prose-img:rounded-xl prose-pre:overflow-x-auto">
@@ -40,14 +54,7 @@ const postLd = {
         <span aria-hidden="true">·</span>
         <span>{remarkPluginFrontmatter.minutesRead} {t.blog.readingTime}</span>
         <div class="flex flex-wrap gap-2">
-          {post.data.tags.map((tag) => (
-            <a
-              href={blogUrl(lang, 'tag/' + tag + '/')}
-              class="rounded-full border border-zinc-300 px-2.5 py-0.5 text-xs text-zinc-600 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] dark:border-zinc-700 dark:text-zinc-300"
-            >
-              {tag}
-            </a>
-          ))}
+          <TagList tags={post.data.tags} lang={lang} />
         </div>
       </div>
 

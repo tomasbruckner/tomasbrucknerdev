@@ -38,7 +38,7 @@ This way you can get an isolated environment for each class. That enables to run
 
 ## Overriding JWT Authentication
 
-It is quite common to use JWT Authentication in modern Web API projects. For testing, you don't want to login for each test. It just unnecessarily slows down testing itself. Also you there might be a different application that you generate your tokens from that is not part of testing.
+It is quite common to use JWT Authentication in modern Web API projects. For testing, you don't want to login for each test. It just unnecessarily slows down testing itself. Also, there might be a different application that you generate your tokens from that is not part of testing.
 
 For these reasons, you might just want to ignore the signature validation of the JWT token. You can do it easily like so:
 
@@ -73,7 +73,7 @@ public async void T01CreateUser()
 }
 ```
 
-When you run the tests in the class, it starts with lower numbers inside the attribute and continuous up. So it will run a test with number 1, then 2 (after 1 finishes), etc. Thanks to that, you can control your use case.
+When you run the tests in the class, it starts with lower numbers inside the attribute and continues up. So it will run a test with number 1, then 2 (after 1 finishes), etc. Thanks to that, you can control your use case.
 
 What I recommend is to name methods in a way that you can tell which one is first, second, etc. I prefix the method name with T (like a Test) and number, e.g. **T01CreateUser**.
 

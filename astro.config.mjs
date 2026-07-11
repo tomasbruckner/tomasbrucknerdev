@@ -5,6 +5,7 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
   site: 'https://tomasbruckner.dev',
+  image: { layout: 'constrained', responsiveStyles: true },
   i18n: {
     locales: ['cs', 'en'],
     defaultLocale: 'cs',

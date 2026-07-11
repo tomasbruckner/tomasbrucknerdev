@@ -1,4 +1,5 @@
 export const SITE_URL = 'https://tomasbruckner.dev';
+export const SITE_NAME = 'Tomáš Bruckner';
 export const EMAIL = 'tomasbrucknermail@gmail.com';
 
 export const SOCIALS = {

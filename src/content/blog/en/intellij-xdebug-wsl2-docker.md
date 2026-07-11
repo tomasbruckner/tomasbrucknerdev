@@ -62,7 +62,7 @@ In the [entry point](https://github.com/tomasbruckner/xdebug-wsl2-demo/blob/mast
 WSLIP=$(grep nameserver /etc/resolv.conf  | cut -d ' ' -f2) docker-compose up
 ```
 
-**Hurdle #4** Even when you start debugging, breakpoints are never hit. That's because Windows Defender Firewall treats WSL as a public network by default and [blocks access](https://github.com/microsoft/WSL/issues/4139). You can configure your firewall using PowerShell to add allow a rule to fix this issue. Just run
+**Hurdle #4** Even when you start debugging, breakpoints are never hit. That's because Windows Defender Firewall treats WSL as a public network by default and [blocks access](https://github.com/microsoft/WSL/issues/4139). You can configure your firewall using PowerShell to add an allow rule to fix this issue. Just run
 
 ```powershell
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
@@ -82,4 +82,4 @@ This is a bug in the IntelliJ tracked [here](https://youtrack.jetbrains.com/issu
 
 Values depend on your Linux distribution and for Drive letter you can choose anything you want. After you have mapped WSL to a network drive, open your project in IntelliJ using this new network drive, and start debugging.
 
-Congratulations, everything should for now! Even though it took some time to make Xdebug work as I needed, for me it was definitely worth the effort. Performance is 5–10 times better for my projects and I can highly recommend it. Hopefully, I don't encounter any more hurdles in the future with WSL 2 and Docker, but if I do, I will update this article. If you have different problems and you want to share your solution, let me know in the comment section.
+Congratulations, everything should work now! Even though it took some time to make Xdebug work as I needed, for me it was definitely worth the effort. Performance is 5–10 times better for my projects and I can highly recommend it. Hopefully, I don't encounter any more hurdles in the future with WSL 2 and Docker, but if I do, I will update this article. If you have different problems and you want to share your solution, let me know in the comment section.

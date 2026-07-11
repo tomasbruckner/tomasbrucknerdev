@@ -83,6 +83,7 @@ describe('blog content', () => {
       expect(en, `missing en/${slug}`).toBeDefined();
       expect(cs!.data.tags).toEqual(en!.data.tags);
       expect(cs!.data.pubDate.valueOf()).toBe(en!.data.pubDate.valueOf());
+      expect(cs!.data.draft ?? false).toBe(en!.data.draft ?? false);
     });
   }
 
