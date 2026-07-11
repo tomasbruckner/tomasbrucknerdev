@@ -69,6 +69,12 @@ const service = {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={t.blog.metaTitle}
+      href={lang === 'cs' ? '/rss.xml' : '/en/rss.xml'}
+    />
 
     <JsonLd data={person} />
     <JsonLd data={service} />

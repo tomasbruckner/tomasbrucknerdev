@@ -18,3 +18,12 @@ Tomáš Bruckner is a software engineer and consultant. He develops and analyzes
 
 ## Lectures
 A collection of recorded talks (mostly Czech audio) on neural networks, microservices, micro-frontends, garbage collectors, Babel, AWS, Alexa, MongoDB, Docker and AdonisJS, available on the site.
+
+## Blog
+A bilingual blog on software development — .NET, PHP, Docker and more. Czech posts at https://tomasbruckner.dev/blog/, English posts at https://tomasbruckner.dev/en/blog/.
+- https://tomasbruckner.dev/blog/intellij-xdebug-wsl2-docker/
+- https://tomasbruckner.dev/blog/snapshot-testing-dotnet-core/
+- https://tomasbruckner.dev/en/blog/intellij-xdebug-wsl2-docker/
+- https://tomasbruckner.dev/en/blog/snapshot-testing-dotnet-core/
+
+RSS feeds: https://tomasbruckner.dev/rss.xml (Czech), https://tomasbruckner.dev/en/rss.xml (English).
