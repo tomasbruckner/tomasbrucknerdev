@@ -22,6 +22,7 @@
     "@playwright/test": "^1.49.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.0.0",
+    "gray-matter": "^4.0.3",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
     "tailwindcss": "^4.0.0",
