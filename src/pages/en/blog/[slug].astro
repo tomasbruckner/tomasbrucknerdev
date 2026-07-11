@@ -1,0 +1,18 @@
+---
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { getBlogPosts, postSlug, type BlogPost as BlogPostEntry } from '../../../lib/blog';
+
+const lang = 'en' as const;
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts('en');
+  return posts.map((post) => ({
+    params: { slug: postSlug(post) },
+    props: { post },
+  }));
+}
+
+interface Props { post: BlogPostEntry }
+const { post } = Astro.props;
+---
+<BlogPost lang={lang} post={post} />

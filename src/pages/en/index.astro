@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Hero from '../../components/Hero.astro';
 import Lectures from '../../components/Lectures.astro';
+import BlogSection from '../../components/BlogSection.astro';
 import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
 const lang = 'en' as const;
@@ -12,6 +13,7 @@ const lang = 'en' as const;
   <main id="main" class="mx-auto max-w-6xl px-4">
     <Hero lang={lang} />
     <Lectures lang={lang} />
+    <BlogSection lang={lang} />
     <Contact lang={lang} />
   </main>
   <Footer lang={lang} />

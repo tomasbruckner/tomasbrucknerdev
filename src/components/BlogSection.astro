@@ -1,0 +1,18 @@
+---
+import { useTranslations, type Lang } from '../i18n/util';
+import { blogUrl, getBlogPosts } from '../lib/blog';
+import BlogCard from './BlogCard.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const posts = (await getBlogPosts(lang)).slice(0, 3);
+---
+<section id="blog" class="scroll-mt-20 py-16">
+  <h2 class="mb-8 text-2xl font-bold tracking-tight">{t.blog.heading}</h2>
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {posts.map((post) => <BlogCard post={post} lang={lang} />)}
+  </div>
+  <a href={blogUrl(lang)} class="mt-8 inline-block text-[var(--color-accent)] hover:underline">
+    {t.blog.allPosts} →
+  </a>
+</section>

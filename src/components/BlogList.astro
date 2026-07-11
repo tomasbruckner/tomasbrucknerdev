@@ -1,0 +1,16 @@
+---
+import { useTranslations, type Lang } from '../i18n/util';
+import { type BlogPost } from '../lib/blog';
+import BlogCard from './BlogCard.astro';
+interface Props { lang: Lang; posts: BlogPost[]; heading: string }
+const { lang, posts, heading } = Astro.props;
+const t = useTranslations(lang);
+---
+<h1 class="mb-8 text-2xl font-bold tracking-tight">{heading}</h1>
+{posts.length > 0 ? (
+  <div class="flex flex-col gap-6">
+    {posts.map((post) => <BlogCard post={post} lang={lang} />)}
+  </div>
+) : (
+  <p class="text-zinc-600 dark:text-zinc-300">{t.blog.empty}</p>
+)}

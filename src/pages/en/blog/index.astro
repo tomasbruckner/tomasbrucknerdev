@@ -1,0 +1,18 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Nav from '../../../components/Nav.astro';
+import BlogList from '../../../components/BlogList.astro';
+import Footer from '../../../components/Footer.astro';
+import { useTranslations } from '../../../i18n/util';
+import { getBlogPosts } from '../../../lib/blog';
+const lang = 'en' as const;
+const t = useTranslations(lang);
+const posts = await getBlogPosts(lang);
+---
+<Base lang={lang} title={t.blog.metaTitle} description={t.blog.metaDescription}>
+  <Nav lang={lang} />
+  <main id="main" class="mx-auto max-w-3xl px-4">
+    <BlogList lang={lang} posts={posts} heading={t.blog.heading} />
+  </main>
+  <Footer lang={lang} />
+</Base>
