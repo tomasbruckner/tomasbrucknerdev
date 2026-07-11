@@ -1,14 +1,17 @@
 ---
 import { useTranslations, type Lang } from '../i18n/util';
+import { blogUrl } from '../lib/blog';
 import LangSwitch from './LangSwitch.astro';
 import ThemeToggle from './ThemeToggle.astro';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+const prefix = lang === 'cs' ? '' : '/en';
 const links = [
-  { href: '#about', label: t.nav.about },
-  { href: '#lectures', label: t.nav.lectures },
-  { href: '#contact', label: t.nav.contact },
+  { href: `${prefix}/#about`, label: t.nav.about },
+  { href: `${prefix}/#lectures`, label: t.nav.lectures },
+  { href: blogUrl(lang), label: t.nav.blog },
+  { href: `${prefix}/#contact`, label: t.nav.contact },
 ];
 ---
 <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">

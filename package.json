@@ -12,6 +12,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.2.0",
     "@fontsource-variable/inter": "^5.1.0",
     "astro": "^5.2.0"
@@ -19,7 +20,10 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
     "@playwright/test": "^1.49.0",
+    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.0.0",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.0",
     "vitest": "^2.1.0",

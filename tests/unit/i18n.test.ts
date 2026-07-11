@@ -14,6 +14,24 @@ describe('i18n', () => {
     expect(getAltLangUrl('en')).toBe('/');
   });
 
+  it('maps cs pathnames to their en equivalent', () => {
+    expect(getAltLangUrl('cs', '/')).toBe('/en/');
+    expect(getAltLangUrl('cs', '/blog/')).toBe('/en/blog/');
+    expect(getAltLangUrl('cs', '/blog/some-slug/')).toBe('/en/blog/some-slug/');
+  });
+
+  it('maps en pathnames to their cs equivalent', () => {
+    expect(getAltLangUrl('en', '/en/')).toBe('/');
+    expect(getAltLangUrl('en', '/en/blog/')).toBe('/blog/');
+    expect(getAltLangUrl('en', '/en/blog/some-slug/')).toBe('/blog/some-slug/');
+    expect(getAltLangUrl('en', '/en')).toBe('/');
+  });
+
+  it('handles pathnames without a trailing slash', () => {
+    expect(getAltLangUrl('cs', '/blog')).toBe('/en/blog');
+    expect(getAltLangUrl('en', '/en/blog')).toBe('/blog');
+  });
+
   it('maps to the alternate language code', () => {
     expect(altLang('cs')).toBe('en');
     expect(altLang('en')).toBe('cs');

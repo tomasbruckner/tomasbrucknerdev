@@ -9,8 +9,11 @@ export function useTranslations(lang: Lang): typeof cs {
   return dictionaries[lang];
 }
 
-export function getAltLangUrl(lang: Lang): string {
-  return lang === 'cs' ? '/en/' : '/';
+export function getAltLangUrl(lang: Lang, pathname: string = '/'): string {
+  if (lang === 'cs') {
+    return '/en' + pathname;
+  }
+  return pathname.replace(/^\/en(\/|$)/, '/');
 }
 
 export function altLang(lang: Lang): Lang {

@@ -10,7 +10,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const canonical = new URL(Astro.url.pathname, SITE_URL).href;
-const altUrl = new URL(getAltLangUrl(lang), SITE_URL).href;
+const altUrl = new URL(getAltLangUrl(lang, Astro.url.pathname), SITE_URL).href;
 const ogImage = new URL('/og-image.png', SITE_URL).href;
 
 const person = {

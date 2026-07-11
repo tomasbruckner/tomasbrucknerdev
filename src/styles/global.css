@@ -1,5 +1,6 @@
 @import '@fontsource-variable/inter';
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -19,4 +20,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
 }
